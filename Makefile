@@ -10,7 +10,7 @@ VERSION = $(shell grep VERSION VERSION|cut -d= -f2)
 REVISION = $(shell grep REVISION VERSION|cut -d= -f2)
 
 cdtvtools: createrev
-	$(VC) +aos68k -I$(NDK_INC) -L$(NDK_LIB) -o build/$(PROJECT)/cdtvtools src/$(PROJECT)/cdtvtools.c -lamiga
+	$(VC) +kick13 -I$(NDK_INC) -L$(NDK_LIB) -o build/$(PROJECT)/cdtvtools src/$(PROJECT)/cdtvtools.c -lamiga
 
 # creates the version string include according to Commodore standard
 createrev:
