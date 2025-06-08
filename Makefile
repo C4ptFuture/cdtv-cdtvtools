@@ -1,4 +1,4 @@
-PROJECT=cdtvtools
+PROJECT=cdtvlandtools
 VBCC=/opt/vbcc
 VC=$(VBCC)/bin/vc
 NDK=$(VBCC)/targets/m68k-amigaos/ndk_3.9
@@ -9,8 +9,8 @@ DATESTRING := $(shell date +'%-d.%-m.%y')
 VERSION = $(shell grep VERSION VERSION|cut -d= -f2)
 REVISION = $(shell grep REVISION VERSION|cut -d= -f2)
 
-cdtvtools: createrev
-	$(VC) +kick13 -I$(NDK_INC) -L$(NDK_LIB) -o build/$(PROJECT)/cdtvtools src/$(PROJECT)/cdtvtools.c -lamiga
+cdtvlandtools: createrev
+	$(VC) +kick13 -I$(NDK_INC) -L$(NDK_LIB) -o build/$(PROJECT)/cdtvlandtools src/$(PROJECT)/cdtvlandtools.c -lamiga
 
 # creates the version string include according to Commodore standard
 createrev:

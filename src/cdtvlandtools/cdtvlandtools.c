@@ -7,7 +7,7 @@
 #include "exec/memory.h"
 #include "clib/alib_protos.h"
 #include "devices/cdtv/bookmark.h"
-#include "cdtvtools.h"
+#include "cdtvlandtools.h"
 #include "rev.h"
 
 
@@ -16,15 +16,15 @@
 #define BOOKMARKMEM 0xDC8000
 
 void usage (void) {
-    printf ("Usage:\n\n CDTVTools [HDDBOOTDELAY <seconds>] [PAL|NTSC] [RESETBMSTORE]\n\n");
+    printf ("Usage:\n\n CDTVLandTools [HDDBOOTDELAY <seconds>] [PAL|NTSC] [RESETBMSTORE]\n\n");
     printf ("  HDDBOOTDELAY seconds             sets HDD Bootdelay to x seconds\n");
     printf ("  PAL                              force 'PAL' timing (50Hz VBLANK)\n");
     printf ("  NTSC                             force 'NTSC' timing (60Hz VBLANK)\n");
     printf ("  RESETBMSTORE                     resets bookmark memory\n\n");
     printf ("Examples:\n\n");
-    printf ("  CDTVTools HDDBOOTDELAY 10        sets bootdelay to 10 seconds\n");
-    printf ("  CDTVTools HDDBOOTDELAY 10 NTSC   sets bootdelay to 10 sec and forces 60Hz\n");
-    printf ("  CDTVTools RESETBMSTORE           resets bookmark memory\n\n");
+    printf ("  CDTVLandTools HDDBOOTDELAY 10        sets bootdelay to 10 seconds\n");
+    printf ("  CDTVLandTools HDDBOOTDELAY 10 NTSC   sets bootdelay to 10 sec and forces 60Hz\n");
+    printf ("  CDTVLandTools RESETBMSTORE           resets bookmark memory\n\n");
 }
 
 int main (int argc, char **argv) 
@@ -45,7 +45,7 @@ int main (int argc, char **argv)
 
     /* print banner */
     printf("\n===========================================================\n");
-    printf ("/// CDTVTools ///\n");
+    printf ("/// CDTVLandTools ///\n");
     printf("===========================================================\n");
     printf (VSTRING);
     printf (" - Captain Future / CDTV Land\n");
