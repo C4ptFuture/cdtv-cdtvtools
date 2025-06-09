@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+
 #include "exec/types.h"
 #include "exec/execbase.h"
 #include "exec/memory.h"
 #include "clib/alib_protos.h"
-#include "devices/cdtv/bookmark.h"
+#include "cdtv/bookmark.h"
 #include "cdtvlandtools.h"
+
 #include "rev.h"
 
 
@@ -23,7 +25,7 @@ void usage (void) {
     printf ("  RESETBMSTORE                     resets bookmark memory\n\n");
     printf ("Examples:\n\n");
     printf ("  CDTVLandTools HDDBOOTDELAY 10        sets bootdelay to 10 seconds\n");
-    printf ("  CDTVLandTools HDDBOOTDELAY 10 NTSC   sets bootdelay to 10 sec and forces 60Hz\n");
+    printf ("  CDTVLandTools HDDBOOTDELAY 10 NTSC   sets bootdelay to 10 sec, forces 60Hz\n");
     printf ("  CDTVLandTools RESETBMSTORE           resets bookmark memory\n\n");
 }
 

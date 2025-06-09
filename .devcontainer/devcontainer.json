@@ -1,0 +1,30 @@
+{
+    "name": "Amiga",
+    "image": "harbor.spacetequila.com/infra/devcontainer-amiga:latest",
+    "containerEnv": {
+      "COSIGN_PASSWORD": "${localEnv:COSIGN_PASSWORD}"
+    },
+    "mounts": [
+      { "source": "/var/run/docker.sock", 
+        "target": "/var/run/docker.sock", 
+        "type": "bind" 
+   //   },
+   //   { "source": "/Volumes/DataExt/projects/cosign-keys/cosign.key", 
+   //     "target": "/cosign.key", 
+   //     "type": "bind" 
+      }
+    ],
+    // lazy, so we can use docker.sock
+    "containerUser": "root",
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+          "prb28.amiga-assembly",
+          "ms-vscode.cpptools-extension-pack",
+          "ms-vscode.makefile-tools"
+        ]
+      }
+    }
+  }

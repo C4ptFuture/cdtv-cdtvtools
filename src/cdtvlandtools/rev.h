@@ -1,1 +1,1 @@
-#define VSTRING "cdtvtools 1.1 (24.4.22)"
+#define VSTRING "cdtvlandtools 1.2 (8.6.25)\0"
