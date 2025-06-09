@@ -19,19 +19,18 @@ Download the latest release, including source code, from the [releases](https://
 You can also build _CDTVLandTools_ yourself:
 
 ```sh
-make cdtvlandtools
+ENVIRONMENT=release make cdtvlandtools
 ```
 The build will be available in `build/cdtvlandtools`.
 
 ## How to use CDTVLandTools
 
-From an AmigaDOS prompt type:
+To show the usage information, from an AmigaDOS prompt type:
 
 ```
 CDTVLandTools ?
 ```
 
-to show the usage information.
 
 Some examples:
 
